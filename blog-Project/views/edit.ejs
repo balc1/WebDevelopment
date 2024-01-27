@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+<h1>Düzenle: <%= post.title %></h1>
+<form action="/edit/<%= post.id %>" method="POST">
+  <label for="title">Başlık:</label>
+  <input type="text" id="title" name="title" value="<%= post.title %>" required>
+  <br>
+  <label for="content">İçerik:</label>
+  <textarea id="content" name="content" required><%= post.content %></textarea>
+  <br>
+  <button type="submit">Kaydet</button>
+</form>
+<a href="/">İptal</a>
+<%- include("partials/footer.ejs") %>

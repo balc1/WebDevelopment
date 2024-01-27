@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+<h1>Yeni Yazı Ekle</h1>
+<form action="/add" method="POST">
+  <label for="title">Başlık:</label>
+  <input type="text" id="title" name="title" required>
+  <br>
+  <label for="content">İçerik:</label>
+  <textarea id="content" name="content" required></textarea>
+  <br>
+  <button type="submit">Ekle</button>
+</form>
+<%- include("partials/footer.ejs") %>

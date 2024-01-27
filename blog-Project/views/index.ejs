@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") %>
+<h1>Blog</h1>
+<ul>
+  <% blogPosts.forEach((post, index) => { %>
+    <li><a href="/post/<%= index %>"><%= post.title %></a></li>
+  <% }); %>
+</ul>
+<a href="/add">Yazı Ekle</a>
+<%- include("partials/footer.ejs") %>

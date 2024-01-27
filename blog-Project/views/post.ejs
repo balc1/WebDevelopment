@@ -1,0 +1,6 @@
+<%- include("partials/header.ejs") %>
+<h1><%= post.title %></h1>
+<p><%= post.content %></p>
+<a href="/">Ana Sayfa</a>
+<a href="/edit/<%= post.id %>">Düzenle</a>
+<%- include("partials/footer.ejs") %>
