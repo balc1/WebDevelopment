@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>Cocktail</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Let's find something Cocktail for you ✌️</h1>
+    <div class="card">
+      <h2>Drink : <%= data.strDrink %></h2>
+      <h3>Category : <%= data.strCategory %></p>
+      <img src="<%= data.strDrinkThumb %>" alt="<%= data.strDrink %>" width="350px" height="350px"/>
+    </div>
+    <form action="/" id="form" class="form" method="POST">
+      <select name="type" class="form-select">
+        <option value="random" data-display="Select">Random Cocktail</option>
+        <option value="margarita">Margarita</option>
+        <option value="Pina%20Colada">Pina Colada</option>
+        <option value="Havana%20Cocktail">Havana Cocktail</option>
+        <option value="Cherry%20Rum">Cherry Rum</option>
+        <option value="Bellini%20Martini">Bellini Martini</option>
+        <option value="happy%20skipper">Happy Skipper</option>
+        <option value="Mai%20Tai">Mai Tai</option>
+        <option value="Figgy%20Thyme">Figgy Thyme</option>
+        <option value="B-53">B-53</option>
+        <option value="Downshift">Downshift</option>
+        <option value="Zoksel">Zoksel</option>
+        <option value="Corpse%20Reviver">Corpse Reviver</option>
+        <option value="Boxcar">Boxcar</option>
+        <option value="Japanese%20Fizz">Japanese Fizz</option>
+      </select>
+      <button type="submit" class="form-submit">Go</button>
+    </form>
+    <section id="cards" class="cards">
+      <% if (locals.data) { %>
+        
+        <article class="card-item">
+          
+          <div class="card-info">
+            <ul class="card-type">
+              <li>
+                <span><%= data.strIngredient1 %></span>
+                <span class="measure"><%= data.strMeasure1 %></span>
+              </li>
+              <li>
+                <span><%= data.strIngredient2 %></span>
+                <span class="measure"><%= data.strMeasure2 %></span>
+              </li>
+              <li>
+                <span><%= data.strIngredient3 %></span>
+                <span class="measure"><%= data.strMeasure3 %></span>
+              </li>
+              <li>
+                <span><%= data.strIngredient4 %></span>
+                <span class="measure"><%= data.strMeasure4 %></span>
+              </li>
+              <li>
+                <span><%= data.strIngredient5 %></span>
+                <span class="measure"><%= data.strMeasure5 %></span>
+              </li>
+              <li>
+                <span><%= data.strIngredient6 %></span>
+                <span class="measure"><%= data.strMeasure6 %></span>
+              </li>
+            </ul>
+            
+          </div>
+        </article>
+        
+      <% } %>
+
+
+        <p>This site was created by Emre Balcı</p>
+
+      <% if (locals.error) { %>
+        <div id="tag-error" class="tag-error">
+          <%= error %>
+      </div>
+      <% } %>
+      
+
+    </section>
+  </div>
+
+</body>
+
+</html>
